@@ -1,8 +1,10 @@
 import React from "react";
 import "./SocialMedia.scss";
 import {socialMediaLinks} from "../../portfolio";
+// import SocialMedia from "../../components/socialMedia/SocialMedia";
 
-export default function socialMedia() {
+
+export default function SocialMedia() {
   if (!socialMediaLinks.display) {
     return null;
   }
@@ -32,17 +34,23 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.gmail ? (
-        <a
-          href={`mailto:${socialMediaLinks.gmail}`}
-          className="icon-button google"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fas fa-envelope"></i>
-          <span></span>
-        </a>
-      ) : null}
+      {socialMediaLinks.email ? (
+  <a
+    href={`mailto:${socialMediaLinks.email}`}
+    className="icon-button google"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fas fa-envelope"></i>
+    <span></span>
+  </a>
+) : null}
+
+
+
+
+
+
 
       {socialMediaLinks.gitlab ? (
         <a
